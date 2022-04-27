@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+.container_box {
+  position: relative;
+  width: 1280px;
+  margin: 0px auto;
+  background: $rgba0000;
+  .row_box {
+    padding: 0px 24px;
+  }
+}
+
+/* Margin */
+.mr_10 {
+  margin-right: 10px;
+}
+.mr_20 {
+  margin-right: 20px;
+}
