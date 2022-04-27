@@ -9,6 +9,10 @@
               <strong><img src="~/assets/imgs/logo-sub.png" alt="LIFE THEATER"></strong>
             </a>
           </h1>
+          <div id="mNav">
+            <h2 class="ir_su">전체메뉴</h2>
+            <NuxtLink to="/" class="list"><span></span></NuxtLink>
+          </div>
           <nav class="nav">
             <ul>
               <li><a href="#">영화</a></li>
