@@ -7,7 +7,7 @@
           <div class="row_box">
             <div class="banner_item_left">
               <ul>
-                <li class="menu"><NuxtLink to="/">전체메뉴</NuxtLink></li>
+                <li class="menu" v-tooltip="{ content: '툴팁' }"><NuxtLink to="/">전체메뉴</NuxtLink></li>
                 <li class="line"><NuxtLink to="/">필름 소사이어티</NuxtLink></li>
                 <li><NuxtLink to="/">클래식 소사이어티</NuxtLink></li>
               </ul>
@@ -30,7 +30,19 @@
       </div>
 
       <div class="banner_image_wrap">
-        <div><img :src="banners[0].image" :alt="banners[0].alt"></div>
+        <div class="carousel-wrapper">
+          <client-only>
+            <carousel v-bind="options">
+              <slide v-for="i in 5" :key="i" class="img-wrapper">
+                <img :src="banners[0].image" :alt="banners[0].alt">
+              </slide>
+            </carousel>
+
+            <navigationNextLabel />
+            <pagination />
+          </client-only>
+        </div>
+
       </div>
     </section>
   </div>
@@ -49,7 +61,13 @@ export default {
           image: require("~/assets/imgs/main_slider01.jpg"),
           alt: '두번째 배너 이미지'
         }
-      ]
+      ],
+      options: {
+        loop: true,
+        perPage: 1,
+        paginationEnabled: false,
+        autoplay: 5000
+      }
     }
   }
 }
@@ -58,4 +76,22 @@ export default {
 <style lang="scss">
 @import '@/assets/components/main/banner.scss';
 
+.carousel-wrapper {
+  height: 526px;
+  .VueCarousel {
+    height: 100%;
+    .VueCarousel-inner {
+      height: 100%;
+    }
+  }
+  .VueCarousel-slide {
+    text-align: center;
+  }
+}
+.img-wrapper img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(gray 100%, transparent 0);
+}
 </style>
