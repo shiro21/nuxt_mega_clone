@@ -7,7 +7,12 @@
           <div class="row_box">
             <div class="banner_item_left">
               <ul>
-                <li class="menu" v-tooltip="{ content: '툴팁' }"><NuxtLink to="/">전체메뉴</NuxtLink></li>
+                <li class="menu" v-tooltip="{ content: '툴팁 테스트' }"><NuxtLink to="/">
+                  전체메뉴
+                  <font-awesome-layers class=""> <!-- suffix: true 덕분에 -icon 생략가능(기존: font-awesome-icon-layers) -->
+                    <font-awesome-icon icon="fa-solid fa-bars" />
+                  </font-awesome-layers>
+                </NuxtLink></li>
                 <li class="line"><NuxtLink to="/">필름 소사이어티</NuxtLink></li>
                 <li><NuxtLink to="/">클래식 소사이어티</NuxtLink></li>
               </ul>

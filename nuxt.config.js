@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import * as FontAwesome from './plugins/fontawesome'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -42,7 +43,17 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    [
+      '@nuxtjs/fontawesome', { component: 'fontAwesome', suffix: true }
+    ]
   ],
+  fontawesome: {
+    icons: {
+      solid: FontAwesome.solid,
+      regular: FontAwesome.regular,
+      brands: FontAwesome.brands
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
