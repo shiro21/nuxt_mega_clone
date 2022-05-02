@@ -3,6 +3,8 @@
     <Header />
 
     <MainBanner />
+
+    <MainMovie />
   </div>
 </template>
 
