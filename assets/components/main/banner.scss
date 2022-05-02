@@ -97,7 +97,23 @@
 }
 
 @media screen and(max-width: 1024px) {
-
+  #banner {
+    .banner_item {
+      .container_box {
+        .row_box {
+          justify-content: flex-end;
+          .banner_item_left {
+            display: none;
+          }
+          .banner_item_right {
+            ul:first-child {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and(max-width: 960px) {
@@ -106,6 +122,53 @@
 
 @media screen and(max-width: 768px) {
 
+}
+
+@media screen and(max-width: 600px) {
+  #banner {
+    .banner_item {
+      .container_box {
+        .row_box {
+          .banner_item_left, .banner_item_right {
+            > ul {
+              > li {
+                &:last-child {
+                }
+                > a {
+                  &:hover {
+                  }
+                }
+              }
+
+              .menu {
+              }
+
+              .white, .purple {
+                width: 80px;
+                padding: 3px 5px 5px 5px;
+                background: $rgba0_6;
+                border-color: $C_FFF;
+              }
+              .white {
+                > a {
+                  color: $C_FFF;
+                }
+              }
+              .purple {
+                > a {
+                  color: $C_FFF;
+                }
+              }
+            }
+          }
+          .banner_item_right {
+            display: flex;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and(max-width: 480px) {
