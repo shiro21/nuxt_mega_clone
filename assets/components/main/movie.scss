@@ -55,9 +55,12 @@
         height: 50px;
         background-color: $C_38116A;
         text-align: center;
+        box-shadow: 3px 3px 8px $rgba0_5;
         > strong {
-          vertical-align: -14px;
+          font-size: 22px;
+          vertical-align: -17px;
           color: $C_FFF;
+          text-shadow: 2px 2px 3px $rgba0_1;
         }
       }
       .card_mx {
