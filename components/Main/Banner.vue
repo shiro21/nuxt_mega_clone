@@ -38,7 +38,7 @@
         <div class="carousel-wrapper">
           <client-only>
             <carousel v-bind="options">
-              <slide v-for="item in banners" :key="item" class="img-wrapper">
+              <slide v-for="(item, idx) in banners" :key="idx" class="img-wrapper">
                 <img :src="item.image" :alt="item.alt" />
                 <div class="absolute_box">
                   <h2>{{item.title}} <em>{{item.subtitle}}</em></h2>
@@ -46,9 +46,6 @@
                 </div>
               </slide>
             </carousel>
-
-            <navigationNextLabel />
-            <pagination />
           </client-only>
         </div>
 
