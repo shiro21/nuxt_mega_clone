@@ -37,7 +37,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/layout.scss";
 @import "@/assets/components/header.scss";
 
 </style>

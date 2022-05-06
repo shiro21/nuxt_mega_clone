@@ -14,67 +14,62 @@
           </div>
 
           <div class="movie_chart">
-            <div :class="{ dp_n: !isActive1}" v-for="(item, index) of items" :key="'a' + index">
-              <div class="card_wrap">
-                <figure>
-                  <img :src="item.image" :srcset="item.srcset + ' 2x'" :alt="item.alt" />
-                </figure>
-                <div class="card_rank"><strong>{{index + 1}}</strong></div>
-                <div class="card_mx">
-                  <span class="icon sp_m ir_pm">MX</span>
-                  <span class="icon sp_b ir_pm">Boutique</span>
-                </div>
-              </div>
-              <div class="card_information">
-                <h3><span class="icon sp_all ir_pm">전체관람가</span> <strong>{{item.alt}}</strong></h3>
-                <div class="card_information_btn">
-                  <NuxtLink to="/">상세정보</NuxtLink>
-                  <NuxtLink to="/">예매하기</NuxtLink>
+
+            <div v-swiper:mySwiper="swiperOption" class="swiper-container" :class="{ dp_n: !isActive1}">
+              <div class="swiper-wrapper">
+                <div v-for="(item, index) of items2" :key="'b' + index" class="swiper-slide">
+                  <div>
+                    <div class="card_wrap">
+                      <figure>
+                        <img :src="item.image" :srcset="item.srcset + ' 2x'" :alt="item.alt" />
+                      </figure>
+                      <div class="card_rank"><strong>{{index + 1}}</strong></div>
+                      <div class="card_mx">
+                        <span class="icon sp_m ir_pm">MX</span>
+                        <span class="icon sp_b ir_pm">Boutique</span>
+                      </div>
+                    </div>
+                    <div class="card_information">
+                      <h3><span class="icon sp_all ir_pm">전체관람가</span> <strong>{{item.alt}}</strong></h3>
+                      <div class="card_information_btn">
+                        <NuxtLink to="/">상세정보</NuxtLink>
+                        <NuxtLink to="/">예매하기</NuxtLink>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <!-- Movie 1 // -->
 
-            <div :class="{ dp_n: !isActive2}" v-for="(item, index) of items2" :key="'b' + index">
-              <div class="card_wrap">
-                <figure>
-                  <img :src="item.image" :srcset="item.srcset + ' 2x'" :alt="item.alt" />
-                </figure>
-                <div class="card_rank"><strong>{{index + 1}}</strong></div>
-                <div class="card_mx">
-                  <span class="icon sp_m ir_pm">MX</span>
-                  <span class="icon sp_b ir_pm">Boutique</span>
-                </div>
-              </div>
-              <div class="card_information">
-                <h3><span class="icon sp_all ir_pm">전체관람가</span> <strong>{{item.alt}}</strong></h3>
-                <div class="card_information_btn">
-                  <NuxtLink to="/">상세정보</NuxtLink>
-                  <NuxtLink to="/">예매하기</NuxtLink>
-                </div>
-              </div>
+            <div class="carousel-wrapper" :class="{ dp_n: !isActive2}">
+              <client-only>
+                <carousel v-bind="options">
+                  <slide v-for="(item, index) of items" :key="'a' + index" class="img-wrapper pr_16">
+                    <div class="card_wrap">
+                      <figure>
+                        <img :src="item.image" :srcset="item.srcset + ' 2x'" :alt="item.alt" />
+                      </figure>
+                      <div class="card_rank"><strong>{{index + 1}}</strong></div>
+                      <div class="card_mx">
+                        <span class="icon sp_m ir_pm">MX</span>
+                        <span class="icon sp_b ir_pm">Boutique</span>
+                      </div>
+                    </div>
+                    <div class="card_information">
+                      <h3><span class="icon sp_all ir_pm">전체관람가</span> <strong>{{item.alt}}</strong></h3>
+                      <div class="card_information_btn">
+                        <NuxtLink to="/">상세정보</NuxtLink>
+                        <NuxtLink to="/">예매하기</NuxtLink>
+                      </div>
+                    </div>
+                  </slide>
+                </carousel>
+              </client-only>
             </div>
             <!-- Movie 2 // -->
 
-            <div :class="{ dp_n: !isActive3}" v-for="(item, index) of items3" :key="'c' + index">
-              <div class="card_wrap">
-                <figure>
-                  <img :src="item.image" :srcset="item.srcset + ' 2x'" :alt="item.alt" />
-                </figure>
-                <div class="card_rank"><strong>{{index + 1}}</strong></div>
-                <div class="card_mx">
-                  <span class="icon sp_m ir_pm">MX</span>
-                  <span class="icon sp_b ir_pm">Boutique</span>
-                </div>
-              </div>
-              <div class="card_information">
-                <h3><span class="icon sp_all ir_pm">전체관람가</span> <strong>{{item.alt}}</strong></h3>
-                <div class="card_information_btn">
-                  <NuxtLink to="/">상세정보</NuxtLink>
-                  <NuxtLink to="/">예매하기</NuxtLink>
-                </div>
-              </div>
-            </div>
+
             <!-- Movie 3 // -->
 
             <div :class="{ dp_n: !isActive4}" v-for="(item, index) of items4" :key="'d' + index">
@@ -133,6 +128,31 @@ export default {
           image: require("~/assets/imgs/poster04.jpg"),
           srcset: require("~/assets/imgs/poster04@2.jpg"),
           alt: "마약왕"
+        },
+        {
+          image: require("~/assets/imgs/poster04.jpg"),
+          srcset: require("~/assets/imgs/poster04@2.jpg"),
+          alt: "마약왕"
+        },
+        {
+          image: require("~/assets/imgs/poster04.jpg"),
+          srcset: require("~/assets/imgs/poster04@2.jpg"),
+          alt: "마약왕"
+        },
+        {
+          image: require("~/assets/imgs/poster04.jpg"),
+          srcset: require("~/assets/imgs/poster04@2.jpg"),
+          alt: "마약왕"
+        },
+        {
+          image: require("~/assets/imgs/poster04.jpg"),
+          srcset: require("~/assets/imgs/poster04@2.jpg"),
+          alt: "마약왕"
+        },
+        {
+          image: require("~/assets/imgs/poster04.jpg"),
+          srcset: require("~/assets/imgs/poster04@2.jpg"),
+          alt: "마약왕"
         }
       ],
       items2: [
@@ -150,6 +170,21 @@ export default {
           image: require("~/assets/imgs/poster07.jpg"),
           srcset: require("~/assets/imgs/poster07@2.jpg"),
           alt: "마스터"
+        },
+        {
+          image: require("~/assets/imgs/poster08.jpg"),
+          srcset: require("~/assets/imgs/poster08@2.jpg"),
+          alt: "마약왕"
+        },
+        {
+          image: require("~/assets/imgs/poster08.jpg"),
+          srcset: require("~/assets/imgs/poster08@2.jpg"),
+          alt: "마약왕"
+        },
+        {
+          image: require("~/assets/imgs/poster08.jpg"),
+          srcset: require("~/assets/imgs/poster08@2.jpg"),
+          alt: "마약왕"
         },
         {
           image: require("~/assets/imgs/poster08.jpg"),
@@ -201,6 +236,40 @@ export default {
           alt: "마약왕"
         }
       ],
+      options: {
+        loop: false,
+        perPage: 4,
+        paginationEnabled: false,
+        // autoplay: 5000
+      },
+
+      slides: '',
+      swiperOption: {
+        loop: false,
+
+        // 반응형
+        breakpoints: {
+          320: {
+            slidesPerView: 1.4
+          },
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 24
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 24
+          },
+          960: {
+            slidesPerView: 3,
+            spaceBetween: 24
+          },
+          1240: {
+            slidesPerView: 4,
+            spaceBetween: 16
+          }
+        }
+      }
     }
   },
   methods: {

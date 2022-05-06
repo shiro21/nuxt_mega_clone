@@ -28,13 +28,15 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/reset.scss',
-    '~/assets/tooltip.scss'
+    '~/assets/tooltip.scss',
+    '~/assets/layout.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/v-tooltip.js',
     { src: '~/plugins/vue-carousel', ssr: false },
+    { src: '~/plugins/vue-swiper.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

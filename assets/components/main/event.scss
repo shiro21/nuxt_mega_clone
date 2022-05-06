@@ -1,0 +1,75 @@
+section {
+  padding-top: 30px;
+}
+
+.event {
+  padding-bottom: 60px;
+  > h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .event_left {
+    width: 66%;
+    margin-right: 2%;
+    float: left;
+    overflow: hidden;
+    .event_left_top {}
+    .event_left_bottom_left {
+      float: left;
+      width: 50%;
+    }
+    .event_left_bottom_right {
+      float: left;
+      width: 50%;
+    }
+  }
+  .event_right {
+    width: 32%;
+    float: left;
+  }
+
+  // 이미지는 글자가 포함되기 때문에 image간격이 생김. 이미지 간격을 지워주기 위한 블록처리.
+  img {
+    display: block;
+  }
+}
+
+
+@media screen and(max-width: 768px) {
+  .event {
+    > h2 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .event_left {
+      width: 100%;
+      margin: 0px;
+      .event_left_top {}
+      .event_left_bottom_left {
+      }
+      .event_left_bottom_right {
+      }
+    }
+    .event_right {
+      display: none;
+    }
+  }
+}
+
+@media screen and(max-width: 600px) {
+  .event {
+    > h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .event_left {
+      .event_left_top {}
+      .event_left_bottom_left {
+      }
+      .event_left_bottom_right {
+      }
+    }
+  }
+}

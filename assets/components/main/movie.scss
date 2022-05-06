@@ -1,9 +1,11 @@
 #movie {
-  padding: 100px 0px;
+  padding-top: 100px;
+  background-color: $C_F8F8F8;
   .movie_title {
     margin-bottom: 60px;
     > ul {
       display: flex;
+      justify-content: center;
       width: 848px;
       margin: 0px auto;
       overflow: hidden;
@@ -27,76 +29,242 @@
       }
     }
   }
-
 }
 .movie_chart {
   display: flex;
   flex-wrap: wrap;
   margin-right: -16px;
-  > div {
-    width: 310px;
-    padding-right: 16px;
-    margin-bottom: 16px;
-    .card_wrap {
-      position: relative;
-      > figure {
-        display: block;
-        width: 100%;
-        > img {
-          width: 100%;
-          height: 100%;
+  > .swiper-container {
+    .swiper-wrapper {
+      .swiper-slide {
+        .card_wrap {
+          position: relative;
+          > figure {
+            display: block;
+            width: 100%;
+            > img {
+              display: block;
+              width: 100%;
+              // height: 100%;
+            }
+          }
+          .card_rank {
+            position: absolute;
+            top: 17px;
+            left: 0px;
+            width: 50px;
+            height: 50px;
+            background-color: $C_38116A;
+            text-align: center;
+            box-shadow: 3px 3px 8px $rgba0_5;
+            > strong {
+              font-size: 22px;
+              vertical-align: -17px;
+              color: $C_FFF;
+              text-shadow: 2px 2px 3px $rgba0_1;
+            }
+          }
+          .card_mx {
+            position: absolute;
+            top: 17px;
+            right: 17px;
+            > span {
+              width: 103px;
+              height: 25px;
+              display: block;
+            }
+          }
         }
-      }
-      .card_rank {
-        position: absolute;
-        top: 17px;
-        left: 0px;
-        width: 50px;
-        height: 50px;
-        background-color: $C_38116A;
-        text-align: center;
-        box-shadow: 3px 3px 8px $rgba0_5;
-        > strong {
-          font-size: 22px;
-          vertical-align: -17px;
-          color: $C_FFF;
-          text-shadow: 2px 2px 3px $rgba0_1;
-        }
-      }
-      .card_mx {
-        position: absolute;
-        top: 17px;
-        right: 17px;
-        > span {
-          width: 103px;
-          height: 25px;
-          display: block;
+        .card_information {
+          background-color: $C_FFF;
+          padding: 17px;
+          border: 1px solid $C_D9D9D9;
+          > h3 {
+            color: $C_333;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            > span {
+              width: 29px;
+              height: 29px;
+              display: inline-block;
+              vertical-align: -3px;
+            }
+          }
+          .card_information_btn {
+            > a {
+              display: inline-block;
+              background-color: $C_F2F2F2;
+              font-size: 18px;
+              padding: 15px 30px;
+            }
+          }
         }
       }
     }
-    .card_information {
-      background-color: $C_FFF;
-      padding: 17px;
-      border: 1px solid $C_D9D9D9;
-      margin-top: -4px;
-      > h3 {
-        color: $C_333;
-        font-size: 30px;
-        font-weight: 700;
-        margin-bottom: 20px;
-        > span {
-          width: 29px;
-          height: 29px;
-          display: inline-block;
-          vertical-align: -3px;
+  }
+}
+
+@media screen and(max-width: 960px) {
+  #movie {
+    .movie_title {
+      > ul {
+        width: 100%;
+        > li {
+          width: 25%;
+          > a {
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+        > .active {
+          > a {
+          }
         }
       }
-      .card_information_btn {
-        > a {
-          display: inline-block;
-          background-color: $C_F2F2F2;
-          font-size: 18px;
-          padding: 15px 30px;
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  #movie {
+    .ir_su {
+      position: unset;
+      width: 100%;
+      height: auto;
+      text-indent: 0px;
+      font-size: 28px;
+      line-height: 1;
+      overflow: unset;
+      padding: 0px 16px 20px 16px;
+    }
+    .movie_title {
+      margin-bottom: 30px;
+      > ul {
+        position: relative;
+        justify-content: unset;
+        padding-bottom: 10px;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $C_E1E1E1;
+          bottom: 0px;
+          left: 0px;
+          z-index: 1;
+        }
+        > li {
+          width: auto;
+          padding: 0px;
+          text-align: left;
+          border: 0px;
+          margin-right: 20px;
+          > a {
+          }
+        }
+        > .active {
+          position: relative;
+          background-color: unset;
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $C_666;
+            bottom: -10px;
+            left: 0px;
+            z-index: 2;
+          }
+          > a {
+            color: $C_666;
+          }
+        }
+      }
+    }
+  }
+
+  .movie_chart {
+    > .swiper-container {
+      .swiper-wrapper {
+        .swiper-slide {
+          .card_wrap {
+            > figure {
+              > img {
+              }
+            }
+            .card_rank {
+              > strong {
+              }
+            }
+            .card_mx {
+              > span {
+              }
+            }
+          }
+          .card_information {
+            > h3 {
+              margin-bottom: 16px;
+              > span {
+                display: none;
+              }
+              > strong {
+                display: block;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 400;
+              }
+            }
+            .card_information_btn {
+              text-align: center;
+              > a {
+                font-size: 16px;
+                padding: 4px 20px;
+                background-color: unset;
+                border: 1px solid $C_777;
+                color: $C_777;
+                &:last-child {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 600px) {
+  #movie {
+    .ir_su {
+    }
+    .movie_title {
+      > ul {
+        white-space: nowrap;
+        overflow: auto;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        > li {
+          position: relative;
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -10px;
+            left: 0px;
+            background-color: $C_E1E1E1;
+            z-index: 1;
+          }
+          > a {
+          }
+        }
+        > .active {
+          > a {
+          }
         }
       }
     }

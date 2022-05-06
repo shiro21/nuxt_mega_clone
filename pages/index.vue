@@ -5,6 +5,8 @@
     <MainBanner />
 
     <MainMovie />
+
+    <MainEvent />
   </div>
 </template>
 
