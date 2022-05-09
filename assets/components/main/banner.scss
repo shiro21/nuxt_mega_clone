@@ -179,22 +179,7 @@
 
 }
 
-.carousel-wrapper {
-  position: relative;
-  height: 600px;
-  .VueCarousel {
-    height: 100%;
-    .VueCarousel-wrapper {
-      height: 100%;
-      .VueCarousel-inner {
-        height: 100% !important;
-      }
-    }
-  }
-  .VueCarousel-slide {
-    text-align: center;
-  }
-}
+
 
 .img-wrapper {
   position: relative;

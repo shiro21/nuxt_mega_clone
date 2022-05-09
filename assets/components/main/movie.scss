@@ -92,11 +92,18 @@
             }
           }
           .card_information_btn {
+            display: flex;
             > a {
               display: inline-block;
+              width: 49%;
+              margin-right: 2%;
+              text-align: center;
               background-color: $C_F2F2F2;
               font-size: 18px;
-              padding: 15px 30px;
+              padding: 15px 0px;
+              &:last-child {
+                margin-right: 0;
+              }
             }
           }
         }
@@ -216,6 +223,7 @@
               }
             }
             .card_information_btn {
+              display: block;
               text-align: center;
               > a {
                 font-size: 16px;
@@ -223,6 +231,7 @@
                 background-color: unset;
                 border: 1px solid $C_777;
                 color: $C_777;
+                margin-right: 0;
                 &:last-child {
                   display: none;
                 }
@@ -269,19 +278,6 @@
       }
     }
   }
-}
-
-.icon {
-  background-image: url("~assets/imgs/icon.png");
-}
-
-@media only screen and(-webkit-min-device-pixel-ratio: 1.5),
-      only screen and(-min-device-pixel-ratio: 1.5),
-      only screen and(-min-resolution: 1.5dppx) {
-      .icon {
-        background-image: url("~assets/imgs/icon@2.png");
-        background-size: 500px;
-      }
 }
 
 // 스프라이트 이미지 좌표

@@ -240,6 +240,8 @@ export default {
         loop: false,
         perPage: 4,
         paginationEnabled: false,
+        slidesPerView: 4,
+        spaceBetween: 24
         // autoplay: 5000
       },
 
@@ -300,7 +302,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/assets/components/main/movie.scss';
 
 </style>

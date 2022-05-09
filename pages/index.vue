@@ -7,6 +7,10 @@
     <MainMovie />
 
     <MainEvent />
+
+    <MainOpening />
+
+    <MainNew />
   </div>
 </template>
 

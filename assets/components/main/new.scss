@@ -1,0 +1,44 @@
+#new {
+  margin-bottom: 30px;
+  padding: 100px 0px;
+}
+
+.new {
+  > h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .new_wrap {
+    display: flex;
+    .new_left {
+      position: relative;
+      flex: 1;
+      height: 500px;
+      margin-right: 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      .movie_play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        .st0 {
+          fill: $C_FFF;
+          opacity: 0.5;
+        }
+        .st1 {
+          fill: $C_FFF;
+        }
+      }
+    }
+    .new_right {
+      width: 400px;
+      height: 500px;
+      background-color: $C_F0F0F0;
+    }
+  }
+}
