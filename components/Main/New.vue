@@ -15,7 +15,42 @@
                   </svg>
                 </div>
               </div>
-              <div class="new_right"></div>
+              <div class="new_right">
+                <h3>{{data.newItems[0].title}}</h3>
+                <span class="release">{{data.newItems[0].release}}</span>
+                <div class="score">
+                  <span class="icon" :class="[ { star0: data.newItems[0].score === 0 }, { star2: data.newItems[0].score > 0 && data.newItems[0].score < 2 }, { star1: data.newItems[0].score >= 2 } ]"></span>
+                  <span class="icon" :class="[ { star0: data.newItems[0].score <= 2 }, { star2: data.newItems[0].score > 2 && data.newItems[0].score < 4 }, { star1: data.newItems[0].score >= 4 } ]"></span>
+                  <span class="icon" :class="[ { star0: data.newItems[0].score <= 4 }, { star2: data.newItems[0].score > 4 && data.newItems[0].score < 6 }, { star1: data.newItems[0].score >= 6 } ]"></span>
+                  <span class="icon" :class="[ { star0: data.newItems[0].score <= 6 }, { star2: data.newItems[0].score > 6 && data.newItems[0].score < 8 }, { star1: data.newItems[0].score >= 8 } ]"></span>
+                  <span class="icon" :class="[ { star0: data.newItems[0].score <= 8 }, { star2: data.newItems[0].score > 8 && data.newItems[0].score < 10 }, { star1: data.newItems[0].score >= 10 } ]"></span>
+                  <strong>{{data.newItems[0].score}} / 10</strong>
+                </div>
+                <ul class="summary">
+                  <li class="genre"><span class="bar">{{data.newItems[0].genre}}</span>{{data.newItems[0].nation}}</li>
+                  <li class="age"><span class="bar">{{data.newItems[0].timer}}</span>{{data.newItems[0].age}}</li>
+                  <li class="description">{{data.newItems[0].description}}</li>
+                </ul>
+                <div class="select">
+                  <div class="select1">
+                    <label for="update" class="ir_su">시간</label>
+                    <input type="text" id="update" name="update" :value="data.newItems[0].update" class="ui_select2">
+                  </div>
+                  <div class="select2">
+                    <select name="uptime" id="uptime" class="ui_select2">
+                      <option v-for="(timer, index) of data.newItems[0].uptime" :key="'c' + index" :value="timer">{{timer}}</option>
+                    </select>
+                  </div>
+                  <div class="select3">
+                    <label for="uptext" class="ir_su">{{data.newItems[0].address}}</label>
+                    <input type="text" id="uptext" name="uptext" class="ui_input3" :placeholder="data.newItems[0].uptext" />
+                  </div>
+                </div>
+                <div class="btn">
+                  <NuxtLink to="/" class="white">좌석확인</NuxtLink>
+                  <NuxtLink to="/" class="purple">예매하기</NuxtLink>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -30,7 +65,7 @@ import fakeData from '@/assets/js/fakeData';
 export default {
   data() {
     return {
-      data: fakeData
+      data: fakeData,
     }
   }
 }
