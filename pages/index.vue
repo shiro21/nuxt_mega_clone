@@ -11,6 +11,8 @@
     <MainOpening />
 
     <MainNew />
+
+    <MainHelp />
   </div>
 </template>
 

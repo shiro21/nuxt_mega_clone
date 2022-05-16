@@ -55,7 +55,80 @@ const newItems = [
   }
 ]
 
+const helpArray = [
+  {
+    area: '전체',
+    title: '[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
+    createdAt: '2019.05.28'
+  },
+  {
+    area: '강남',
+    title: '[라이브뷰잉] 플라잉독 10주년 기념 라이브 10주년 기념 방송 라이브 쇼',
+    createdAt: '2019.05.28'
+  },
+  {
+    area: '안양',
+    title: '[공지] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
+    createdAt: '2019.05.28'
+  },
+  {
+    area: '전체',
+    title: '[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
+    createdAt: '2019.05.28'
+  }
+]
+
+const helpArray2 = [
+  {
+    area: '강남',
+    title: '[라이브뷰잉] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
+    createdAt: '2019.05.28'
+  },
+  {
+    area: '전체',
+    title: '[공지] 플라잉독 10주년 기념 라이브 10주년 기념 방송 라이브 쇼',
+    createdAt: '2019.05.28'
+  },
+  {
+    area: '안양',
+    title: '[공지] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
+    createdAt: '2019.05.28'
+  },
+  {
+    area: '전체',
+    title: '[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼',
+    createdAt: '2019.05.28'
+  }
+]
+
+const helpCard = [
+  {
+    image: require('@/assets/imgs/card01.jpg'),
+    srcset: require('@/assets/imgs/card01@2.jpg'),
+    alt: '이미지입니다!!',
+    creditCompany: 'T멤버십 일반',
+    benefit: '영화 2,000원 현장 즉시 할인(1일 5매)'
+  },
+  {
+    image: require('@/assets/imgs/card02.jpg'),
+    srcset: require('@/assets/imgs/card02@2.jpg'),
+    alt: '이미지입니다!!',
+    creditCompany: 'T멤버십 일반',
+    benefit: '영화 2,000원 현장 즉시 할인(1일 5매)'
+  },
+  {
+    image: require('@/assets/imgs/card03.jpg'),
+    srcset: require('@/assets/imgs/card03@2.jpg'),
+    alt: '이미지입니다!!',
+    creditCompany: 'T멤버십 일반',
+    benefit: '영화 2,000원 현장 즉시 할인(1일 5매)'
+  }
+]
+
 module.exports = {
   bgImage: bgImage,
   newItems: newItems,
+  helpArray: helpArray,
+  helpArray2: helpArray2,
+  helpCard: helpCard
 }
