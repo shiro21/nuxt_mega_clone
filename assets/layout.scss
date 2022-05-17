@@ -1,5 +1,21 @@
 @import './variables.scss';
 
+// 스킵 메뉴
+#skip {
+  position: relative;
+  > a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 140px;
+    border: 1px solid $C_FFF;
+    color: $C_FFF;
+    text-align: center;
+    background-color: $C_333;
+    &:active, &:focus { top: 0; }
+  }
+}
+
 .container_box {
   position: relative;
   width: 1280px;
