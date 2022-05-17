@@ -7,6 +7,7 @@
   > article {
     width: 32%;
     margin-right: 2%;
+    overflow: hidden;
     > h3 {
       font-size: 30px;
       font-weight: 500;
@@ -17,7 +18,7 @@
     }
     > div {
       border: 1px solid $C_DBDBDB;
-      height: 373px;
+      height: 385px;
     }
   }
   .help_box1 {
@@ -50,6 +51,7 @@
             width: 100%;
             > li {
               padding: 17px;
+              border-bottom: 1px solid $C_DBDBDB;
               > dl {
                 > dt {
                   > strong {}
@@ -111,5 +113,219 @@
       }
     }
   }
-  .help_box3 {}
+  .help_box3 {
+    .service {
+      > ul {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        > li {
+          width: 50%;
+          &:nth-child(1) { border-right: 1px solid $C_DBDBDB; border-bottom: 1px solid $C_DBDBDB; }
+          &:nth-child(2) { border-bottom: 1px solid $C_DBDBDB; }
+          &:nth-child(3) { border-right: 1px solid $C_DBDBDB; }
+          > a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            .img_svg {
+              display: block;
+              width: 120px;
+              height: 120px;
+              margin: 20px auto 0 auto;
+            }
+            > strong {
+              display: block;
+              font-size: 18px;
+              font-weight: 500;
+              color: $C_666;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1024px) {
+  .help {
+    flex-wrap: wrap;
+    > article {
+      > h3 {
+      }
+      :last-child {
+      }
+      > div {
+        height: 391px;
+      }
+    }
+    .help_box1 {
+      width: 49%;
+      margin-right: 2%;
+      .notice {
+        > ul {
+          > li {
+            > a {
+            }
+            .active { }
+            > ul {
+              > li {
+                > dl {
+                  > dt {
+                    > strong {}
+                    > em { }
+                    .bar { }
+                    .bar:after {
+                    }
+                  }
+                  > dd {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .help_box2 {
+      width: 49%;
+      margin-right: 0;
+      .card {
+        > ul {
+          > li {
+            height: 107px;
+            &:last-child { margin-bottom: 0; }
+            > a {
+              > span {
+                > img { }
+              }
+              > strong, > em {
+              }
+              > strong {
+              }
+              > em {
+              }
+            }
+          }
+        }
+      }
+    }
+    .help_box3 {
+      width: 100%;
+      margin-right: 0;
+      position: relative;
+      margin-top: 2%;
+      > h3 { overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px; }
+      .service {
+        height: auto;
+        > ul {
+          flex-wrap: nowrap;
+          > li {
+            &:nth-child(1) { border: 0; }
+            &:nth-child(2) { border: 0; }
+            &:nth-child(3) { border: 0; }
+            > a {
+              .img_svg {
+              }
+              > strong {
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  #help {
+    padding-top: 30px;
+  }
+  .help {
+    display: block;
+    > article {
+      > h3 {
+        font-size: 24px;
+      }
+      :last-child {
+      }
+      > div {
+      }
+    }
+    .help_box1 {
+      width: 100%;
+      margin-right: 0;
+      .notice {
+        > ul {
+          > li {
+            > a {
+            }
+            .active { }
+            > ul {
+              > li {
+                > dl {
+                  > dt {
+                    > strong {}
+                    > em { }
+                    .bar { }
+                    .bar:after {
+                    }
+                  }
+                  > dd {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .help_box2 {
+      width: 100%;
+      padding-top: 30px;
+      margin-right: 0;
+      .card {
+        > ul {
+          > li {
+            &:last-child { }
+            > a {
+              > span {
+                > img { }
+              }
+              > strong, > em {
+              }
+              > strong {
+              }
+              > em {
+              }
+            }
+          }
+        }
+      }
+    }
+    .help_box3 {
+      > h3 { }
+      .service {
+        > ul {
+          display: flex;
+          flex-wrap: wrap;
+          > li {
+            &:nth-child(1) { border-right: 1px solid $C_DBDBDB; border-bottom: 1px solid $C_DBDBDB; }
+            &:nth-child(2) { border-bottom: 1px solid $C_DBDBDB; }
+            &:nth-child(3) { border-right: 1px solid $C_DBDBDB; }
+            > a {
+              .img_svg {
+                width: 70px;
+                height: 70px;
+              }
+              > strong {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
