@@ -36,7 +36,8 @@ export default {
   plugins: [
     '~/plugins/v-tooltip.js',
     { src: '~/plugins/vue-carousel', ssr: false },
-    { src: '~/plugins/vue-swiper.js', ssr: false }
+    { src: '~/plugins/vue-swiper.js', ssr: false },
+    { src: '~/plugins/vue-youtube.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

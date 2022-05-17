@@ -56,6 +56,17 @@
         </div>
       </div>
     </section>
+
+    <!-- 트레일러 -->
+    <aside id="blackout" class="overlay" :class="{ dp_n: trailerOpen }">
+      <div id="trailer_modal" class="modal">
+        <!-- YouTube -->
+        <div id="player2" class="trailer">
+
+        </div>
+      </div>
+      <button id="hide_trailer" class="modal_close" @click="modalClose">닫기</button>
+    </aside>
   </div>
 </template>
 
@@ -65,7 +76,13 @@ import fakeData from '@/assets/js/fakeData';
 export default {
   data() {
     return {
+      trailerOpen: true,
       data: fakeData,
+    }
+  },
+  methods: {
+    modalClose() {
+      this.trailerOpen = !this.trailerOpen;
     }
   }
 }
