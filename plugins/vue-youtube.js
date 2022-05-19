@@ -1,4 +1,4 @@
 import Vue from 'vue'
-import VuePlayerPlugin from 'vue-youtube-iframe-api'
+import VueYoutube from 'vue-youtube/dist/vue-youtube'
 
-Vue.use(VuePlayerPlugin)
+Vue.use(VueYoutube)

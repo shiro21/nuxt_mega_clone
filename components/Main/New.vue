@@ -7,7 +7,7 @@
             <h2>새로운 영화</h2>
             <div class="new_wrap">
               <div class="new_left" :title="data.bgImage[1].alt" :style="{ backgroundImage: 'url(' + data.bgImage[1].image + ')' }">
-                <div class="movie_play">
+                <div class="movie_play mouse_pointer" @click="modalOpen">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
                       <circle class="st0" cx="60" cy="60.4" r="56"/>
@@ -62,10 +62,10 @@
       <div id="trailer_modal" class="modal">
         <!-- YouTube -->
         <div id="player2" class="trailer">
-
+          <youtube :video-id="videoId" :player-vars="playerVars" @playing="playing"></youtube>
         </div>
       </div>
-      <button id="hide_trailer" class="modal_close" @click="modalClose">닫기</button>
+      <button id="hide_trailer" class="modal_close" @click="modalOpen">닫기</button>
     </aside>
   </div>
 </template>
@@ -78,12 +78,22 @@ export default {
     return {
       trailerOpen: true,
       data: fakeData,
+      videoId: 'lG0Ys-2d4MA',
+      playerVars: {
+        resize: true,
+        fitParent: true
+      }
     }
   },
   methods: {
-    modalClose() {
+    modalOpen() {
       this.trailerOpen = !this.trailerOpen;
+    },
+    playing() {
+      console.log('\o/ we are watching!!!')
     }
+  },
+  computed: {
   }
 }
 </script>
