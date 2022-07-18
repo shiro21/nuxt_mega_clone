@@ -42,55 +42,13 @@
             </div>
             <!-- Movie 1 // -->
 
-            <div class="carousel-wrapper" :class="{ dp_n: !isActive2}">
-              <client-only>
-                <carousel v-bind="options">
-                  <slide v-for="(item, index) of items" :key="'a' + index" class="img-wrapper pr_16">
-                    <div class="card_wrap">
-                      <figure>
-                        <img :src="item.image" :srcset="item.srcset + ' 2x'" :alt="item.alt" />
-                      </figure>
-                      <div class="card_rank"><strong>{{index + 1}}</strong></div>
-                      <div class="card_mx">
-                        <span class="icon sp_m ir_pm">MX</span>
-                        <span class="icon sp_b ir_pm">Boutique</span>
-                      </div>
-                    </div>
-                    <div class="card_information">
-                      <h3><span class="icon sp_all ir_pm">전체관람가</span> <strong>{{item.alt}}</strong></h3>
-                      <div class="card_information_btn">
-                        <NuxtLink to="/">상세정보</NuxtLink>
-                        <NuxtLink to="/">예매하기</NuxtLink>
-                      </div>
-                    </div>
-                  </slide>
-                </carousel>
-              </client-only>
-            </div>
+
             <!-- Movie 2 // -->
 
 
             <!-- Movie 3 // -->
 
-            <div :class="{ dp_n: !isActive4}" v-for="(item, index) of items4" :key="'d' + index">
-              <div class="card_wrap">
-                <figure>
-                  <img :src="item.image" :srcset="item.srcset + ' 2x'" :alt="item.alt" />
-                </figure>
-                <div class="card_rank"><strong>{{index + 1}}</strong></div>
-                <div class="card_mx">
-                  <span class="icon sp_m ir_pm">MX</span>
-                  <span class="icon sp_b ir_pm">Boutique</span>
-                </div>
-              </div>
-              <div class="card_information">
-                <h3><span class="icon sp_all ir_pm">전체관람가</span> <strong>{{item.alt}}</strong></h3>
-                <div class="card_information_btn">
-                  <NuxtLink to="/">상세정보</NuxtLink>
-                  <NuxtLink to="/">예매하기</NuxtLink>
-                </div>
-              </div>
-            </div>
+
             <!-- Movie 4 // -->
           </div>
         </div>
