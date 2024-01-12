@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/swiper-test", {data:[{}],fetch:{},mutations:void 0});
