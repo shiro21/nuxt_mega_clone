@@ -85,6 +85,10 @@ export default {
       }
     }
   },
+  target: "static",
+  router: {
+    base: "/nuxt_mega_clone/"
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
